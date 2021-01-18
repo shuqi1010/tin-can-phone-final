@@ -198,4 +198,77 @@ basic.forever(function () {
         basic.pause(5000)
         basic.clearScreen()
     }
+    if (sr.compare("HEARTS") == 0) {
+        basic.showIcon(IconNames.SmallHeart)
+        basic.pause(5000)
+        basic.clearScreen()
+    }
+    if (sr.compare("DUCK") == 0) {
+        basic.showIcon(IconNames.Duck)
+        basic.pause(5000)
+        basic.clearScreen()
+    }
+    if (sr.compare("MUSIC") == 0) {
+        basic.showIcon(IconNames.EigthNote)
+        basic.pause(5000)
+        basic.clearScreen()
+    }
+    if (sr.compare("UP") == 0) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
+            . . # . .
+            `)
+        basic.pause(5000)
+        basic.clearScreen()
+        if (sr.compare("DOWN") == 0) {
+            basic.showLeds(`
+                . . # . .
+                . . # . .
+                # . # . #
+                . # # # .
+                . . # . .
+                `)
+            basic.pause(5000)
+            basic.clearScreen()
+        }
+        if (sr.compare("LEFT") == 0) {
+            basic.showLeds(`
+                . . # . .
+                . # . . .
+                # # # # #
+                . # . . .
+                . . # . .
+                `)
+            basic.pause(5000)
+            basic.clearScreen()
+        }
+        if (sr.compare("RIGHT") == 0) {
+            basic.showLeds(`
+                . . # . .
+                . . . # .
+                # # # # #
+                . . . # .
+                . . # . .
+                `)
+            basic.pause(5000)
+            basic.clearScreen()
+        }
+    }
+    if (sr.compare("HI") == 0) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(100)
+        strip.clear()
+        basic.showLeds(`
+            # . . . #
+            # . . . .
+            # # # . #
+            # . # . #
+            # . # . #
+            `)
+        basic.pause(5000)
+        basic.clearScreen()
+    }
 })
